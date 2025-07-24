@@ -1,7 +1,7 @@
 "use client";
 import { VStack, Heading, Grid, GridItem } from "@chakra-ui/react";
-import Layout from "@/components/Layout";
-import ArticleCard from "@/components/ArticleCard";
+import Layout from "../../../components/Layout";
+import ArticleCard from "../../../components/ArticleCard";
 
 const articles = [
   {

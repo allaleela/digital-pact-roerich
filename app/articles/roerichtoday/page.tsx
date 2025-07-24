@@ -1,6 +1,6 @@
 "use client";
 import { Heading, Text, VStack } from "@chakra-ui/react";
-import Layout from "@/components/Layout";
+import Layout from "../../../components/Layout";
 
 export default function RoerichTodayPage() {
   return (

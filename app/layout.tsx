@@ -1,32 +1,27 @@
-import "./globals.css";
 import { Inter } from "next/font/google";
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "@/theme/theme";
-import Header from "./Header";
-import Footer from "./Footer";
+import theme from "../theme/theme";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import ChakraProviders from "./ChakraProviders";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata = { title: "Современное искусство" };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <Box minH="100vh" display="flex" flexDirection="column">
-      <Header />
-      <Container maxW="6xl" py={6} flex="1">
-        {children}
-      </Container>
-      <Footer />
-    </Box>
-  );
-}
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru" className={inter.variable}>
-    <body>
-      <ChakraProviders>{children}</ChakraProviders>
-    </body>
-  </html>
+      <body>
+        <ChakraProviders>
+          <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+            <Header />
+            <main style={{ flex: 1, maxWidth: "1200px", margin: "0 auto", width: "100%", padding: "24px 0" }}>
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ChakraProviders>
+      </body>
+    </html>
   );
 }

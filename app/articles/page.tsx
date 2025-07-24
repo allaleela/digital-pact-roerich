@@ -1,7 +1,8 @@
 "use client";
 
 import { Grid, GridItem, Heading, VStack } from "@chakra-ui/react";
-import ArticleCard from "@/components/ArticleCard";
+// @ts-ignore
+import ArticleCard from "../../components/ArticleCard";
 
 const articles = [
   { title: "Что такое ташизм?", excerpt: "Одна из самых выразительных форм абстракции в 20 веке…", href: "/articles/arttoday/page" },
